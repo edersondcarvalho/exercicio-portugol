@@ -1,0 +1,18 @@
+programa {
+  funcao inicio() {
+    cadeia tipoAnimal, caracAnimal, alimentoAnimal
+
+    
+    escreva ("Digite Tipo Animal: ---- | Vertebrado ou Invertebrado. | ----- \n")
+    leia(tipoAnimal)
+     escreva ("Digite Tipo Animal entre: ---- | Ave, Mamifero, inseto ou Anelideo. | ----- \n")
+    leia(caracAnimal)
+    escreva ("Digite Tipo de Alimentcão do animal entre: ---- | Carnivoro, Onivoro,Herbivoro, Hematofago. | ----- \n")
+    leia(alimentoAnimal)
+
+
+
+
+    
+  }
+}

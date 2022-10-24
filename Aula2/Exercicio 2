@@ -1,0 +1,47 @@
+programa {
+  funcao inicio() {
+    inteiro codigoProduto, quantidade, valorPedido
+   
+               
+    escreva("\n Digite o Codigo do Item: ")
+    leia(codigoProduto)
+
+    escreva("\n Digite a Quantidade: ")
+    leia(quantidade)
+
+    escolha (codigoProduto)
+    caso 1:
+    escreva("\n Voce Escolheu Cachorro Quente" )
+    valorPedido = quantidade * 10
+    escreva("\n O Valor total e de R$ ", valorPedido)
+    pare    
+    caso 2:
+    escreva("\n Voce Escolheu X - Salada" )
+    valorPedido = quantidade * 15
+    escreva("\n O Valor total e de R$ ", valorPedido)
+    pare
+    caso 3:
+    escreva("\n Voce Escolheu X - Bacon" )
+    valorPedido = quantidade * 18
+    escreva("\n O Valor total e de R$ ", valorPedido)
+    pare    
+    caso 4:
+    escreva("\n Voce Escolheu Bauru" )
+    valorPedido = quantidade * 12
+    escreva("\n O Valor total e de R$ ", valorPedido)
+    pare
+    caso 5:
+    escreva("\n Voce Escolheu Refrigerante" )
+    valorPedido = quantidade * 8
+    escreva("\n O Valor total e de R$ ", valorPedido )
+    pare
+    caso 6:
+    escreva("\n Voce Escolheu Suco de laranja" )
+    valorPedido = quantidade * 13
+    escreva("\n O Valor total e de R$ ", valorPedido) 
+    pare
+
+
+
+  }
+}

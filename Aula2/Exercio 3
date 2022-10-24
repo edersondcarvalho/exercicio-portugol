@@ -1,0 +1,27 @@
+programa {
+  funcao inicio() {
+    cadeia  nome
+    inteiro idade 
+
+    escreva("Digite o seu nome: ")
+    leia(nome)
+
+    escreva("Digite a Idade: ")
+    leia(idade)
+
+    se(idade > 0 e < 16 )
+      escreva ("Não esta apto para votar")
+
+      senao se(idade  <= 18 )
+      escreva ("Apto mas não obrigatorio")
+
+      senao se(idade <= 65)
+      escreva ("Voto Obrigatorio")
+
+      senao se(idade  >= 65)
+      escreva ("Apto mas não obrigatorio")
+
+          
+
+  }
+}

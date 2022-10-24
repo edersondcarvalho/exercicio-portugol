@@ -1,0 +1,26 @@
+programa {
+  funcao inicio() {
+    inteiro numero, resultado
+
+    escreva("digite um numero: ")
+    leia(numero)
+
+    resultado = numero%2
+
+    se (resultado ==> 0 )
+      escreva("Numero Par ")
+      
+    senao 
+      escreva("Numero Impar") 
+      
+    se (resultado -0)
+          escreva(" e Numero Positivo ") 
+
+    senao 
+          escreva(" e Numero negativo") }
+
+   
+
+    
+  
+}

@@ -1,52 +1,35 @@
-programa
-{
-	
-	funcao inicio()
-	{
-		//Cria uma Matriz 5x4
-		inteiro matrizInteiros[3][3], tamanhoLinha, tamanhoColuna, soma=0, vetorSoma[3]
-
-		// Define a quantidade de linhas e colunas para delimitar os laços de repetição
-		tamanhoLinha = 3
-		tamanhoColuna = 3
+programa {
+	funcao inicio() {
+		inteiro matriz[3][3], diagPrin[3], diagSec[3], n, p, somap = 0, somas = 0
 		
-		// Insere os dados na matriz
-		para(inteiro indiceLinha=0; indiceLinha < tamanhoLinha; indiceLinha++){
-
-			para(inteiro indiceColuna=0; indiceColuna < tamanhoColuna; indiceColuna++){
-			
-				escreva("Digite um valor para a posição [", indiceLinha, "][", indiceColuna, "]: ")
-				leia(matrizInteiros[indiceLinha][indiceColuna])
-
-			}
-			
+		para(n = 0; n < 3; n++){
+		    para(p = 0; p < 3; p++){
+		        escreva("Digite um valor para a posição: [",n,"][",p,"]: ")
+		        leia(matriz[n][p])
+		        limpa()
+		        se(n==p){
+		            diagPrin[n] = matriz[n][p]
+		        }
+		        se((n+p)==2){
+		            diagSec[n] = matriz[n][p]
+		        }
+		    }
 		}
-
-		// Como desejamos somar as colunas, invertemos os índices nos laços de repetição
-		// Compare com os laços de repetição acima
-		para(inteiro indiceColuna=0; indiceColuna < tamanhoColuna; indiceColuna++){
-
-			para(inteiro indiceLinha=0; indiceLinha < tamanhoLinha; indiceLinha++){
-			
-				// Armazena a soma dos elementos da coluna na variável 
-				soma += matrizInteiros[indiceLinha][indiceColuna]
-
-			}
-
-			// Guarda a soma no vetor auxiliar
-			vetorSoma[indiceColuna] = soma
-			
-			// Zera a variável soma, para receber a soma dos elementos da próxima coluna
-			soma = 0 
-			
+		
+		escreva("Elementos da diagonal principal: ")
+		para(n = 0; n < 3; n++){
+		    escreva(diagPrin[n], " ")
+		    somap = somap + diagPrin[n]
 		}
-
-		// Mostra na tela o resultado da soma dos elementos de cada coluna da Matriz
-		para(inteiro indiceColuna=0; indiceColuna < tamanhoColuna; indiceColuna++){
-
-			escreva("\nSoma de todos os elementos da coluna ", indiceColuna + 1, " é: ", vetorSoma[indiceColuna])
-			
+		
+		escreva("\nElementos da diagonal secundária:  ")
+		para(n = 0; n < 3; n++){
+		    escreva(diagSec[n]," ")
+		    somas = somas + diagSec[n]
 		}
+		
+		escreva("\nSoma dos elementos da diagonal principal: ", somap)
+		escreva("\nSoma dos elementos da diagnal secundária: ", somas)
 		
 	}
 }
